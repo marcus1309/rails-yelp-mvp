@@ -3,7 +3,11 @@
 <%= form_for @restaurant do |f| %>
   <%= f.label :restaurant, "restaurant"%>
   <%= f.text_field :name %>
-  <%= f.label :reviews, "reviews"%>
-  <%= f.text_field :reviews %>
+  <%= f.label :address, "address"%>
+  <%= f.text_field :address %>
+  <%= f.label :phone_number, "phone number"%>
+  <%= f.text_field :phone_number %>
+  <%= f.label :category, "category"%>
+  <%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"] %>
   <%= f.submit %>
 <% end %>

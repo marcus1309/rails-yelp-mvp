@@ -1,0 +1,12 @@
+<h1>Reviews</h1>
+
+<%= link_to "add", new_review_path, method: :index, data: {confirm: "Are you sure you to add this review?"} %>
+
+<ul>
+  <% @reviews.each do |review| %>
+  <li>
+    <%= link_to review.restaurant, review_path(review) %> -
+  </li>
+  <%end %>
+</ul>
+
