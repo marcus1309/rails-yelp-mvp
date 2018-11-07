@@ -1,0 +1,17 @@
+<h1>Restaurants</h1>
+
+
+
+<%= link_to "add", new_restaurant_path, method: :index, data: {confirm: "Are you sure you to add this restaurant?"} %>
+
+
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li>
+    <%= link_to restaurant.name, restaurant_path(restaurant) %> -
+
+  </li>
+  <%end %>
+</ul>
+
